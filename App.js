@@ -1,5 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image, TextInput,  } from 'react-native';
+import { Feather } from "@expo/vector-icon/Feather";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <View style={styles.inputbox}>
         <TextInput style={styles.searchBox}
         placeholder="Search"/>
+        <Feather name="search" size={16} color="black" style={styles.searchIcon} />
 
       </View>
 
@@ -58,5 +60,16 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alighnItems: "center",
   },
-  
+  searchBox: {
+    width: 280,
+    height: 48,
+    backgroundColor: "#FBF9F7",
+    borderRadius: 10,
+    marginLeft: 20,
+    fontSize: 16,
+    fontWeight: 700,
+    fontColor: "#000000",
+    paddingLeft: 35,
+  },
+
 });
